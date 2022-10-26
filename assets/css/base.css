@@ -1,0 +1,133 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --shadow-color: #ccc;
+    --primary-color: #04d9e1;
+    --primary-color-text: rgb(16, 171, 171);
+}
+
+.default-primary-text {
+    color: rgb(15, 142, 142);
+}
+
+* {
+    box-sizing: inherit;
+}
+
+.roww {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.modal__body {
+    background-color: var(--white-color);
+    margin: auto;
+    z-index: 1;
+}
+
+/* Form */
+.auth-form--center {
+    margin: 0 20px 0 20px;
+}
+
+/* Btn */
+button:hover {
+    cursor: pointer;
+}
+
+.btn--normal {
+    background-color: #fff;
+    border: 0.5px solid transparent;
+}
+
+.btn--normal:hover {
+    background-color: #eee;
+    border: 0.5px solid var(--white-color);
+    animation: hoverNormalBtn ease 0.1s;
+}
+
+@keyframes hoverNormalBtn {
+    from {
+        background-color: #fff;
+    }
+
+    to {
+        background-color: #eee;
+    }
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+    border: 0.5px solid var(--primary-color);
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 0.5px solid var(--primary-color);
+    animation: hoverPrimaryBtn ease 0.1s;
+}
+
+@keyframes hoverPrimaryBtn {
+    from {
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+
+    to {
+        background-color: #fff;
+        color: var(--primary-color);
+    }
+}
+
+/* No border btn */
+.btn--no-border {
+    border: none;
+}
